@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1d3833" />
+  <title>เลขโรมันเล่นได้</title>
+  <meta name="description" content="เครื่องคิดเลขและเกมฝึกเลขโรมันสำหรับเด็ก" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">R</span><div><h1>เลขโรมันเล่นได้</h1><p>กด คิด แปลง และเรียนรู้ไปพร้อมกัน</p></div></div>
+      <div class="mode-switch" role="group" aria-label="เลือกรูปแบบตัวเลข">
+        <button class="mode active" data-mode="arabic">๑๒๓<br><span>อารบิก</span></button>
+        <button class="mode" data-mode="roman">ⅠⅤⅩ<br><span>โรมัน</span></button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <section class="calculator panel" aria-label="เครื่องคิดเลข">
+        <div class="calc-head"><span>CALCULATOR</span><span class="lamp"></span><span id="modeLabel">โหมดอารบิก</span></div>
+        <div class="display-wrap"><div id="expression" class="expression" aria-live="polite">พร้อมคำนวณ</div><output id="display" class="display" aria-live="polite">0</output></div>
+        <p id="hint" class="keyboard-hint">ใช้แป้นพิมพ์ 0–9 ได้เลย</p>
+        <div id="keypad" class="keypad" aria-label="ปุ่มคำนวณ"></div>
+        <p id="message" class="message" role="status"></p>
+      </section>
+
+      <aside class="learn-panel">
+        <section class="lesson panel">
+          <div class="eyebrow">จำง่าย ๆ</div>
+          <h2>ตัวช่วยเลขโรมัน</h2>
+          <div class="symbols"><span><b>I</b>1</span><span><b>V</b>5</span><span><b>X</b>10</span><span><b>L</b>50</span><span><b>C</b>100</span><span><b>D</b>500</span><span><b>M</b>1000</span></div>
+          <p>ถ้าตัวเล็กอยู่หน้าใหญ่ ให้ “ลบ” เช่น <strong>IV = 4</strong></p>
+        </section>
+        <section class="challenge panel">
+          <div class="challenge-top"><div><div class="eyebrow">โจทย์ฝึกแปลง</div><h2>ลองตอบดู!</h2></div><span class="score">ถูก <b id="score">0</b> ข้อ</span></div>
+          <div id="question" class="question">47</div>
+          <p id="questionText">พิมพ์เป็นเลขโรมัน แล้วกดตรวจคำตอบ</p>
+          <div class="answer-row"><input id="answer" autocomplete="off" aria-label="คำตอบโจทย์ฝึก" /><button id="check" class="check-btn">ตรวจคำตอบ</button></div>
+          <button id="newQuestion" class="new-question">↻ สุ่มโจทย์ใหม่</button>
+          <p id="feedback" class="feedback" role="status"></p>
+        </section>
+      </aside>
+    </section>
+    <footer>เคล็ดลับ: กด <kbd>Enter</kbd> เพื่อคำนวณ · กด <kbd>Esc</kbd> เพื่อล้าง</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

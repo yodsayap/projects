@@ -1,0 +1,9 @@
+{
+  "name": "roman-calculator",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node build.mjs"
+  }
+}
